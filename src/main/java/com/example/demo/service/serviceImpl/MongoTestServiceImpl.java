@@ -20,6 +20,6 @@ public class MongoTestServiceImpl implements MongoTestService{
 
     @Override
     public void saveOne(Staff staff) {
-        mongoTestDao.insert(staff);
+        mongoTestDao.insertOne(staff);
     }
 }

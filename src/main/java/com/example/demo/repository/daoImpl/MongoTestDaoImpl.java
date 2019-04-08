@@ -20,14 +20,29 @@ public class MongoTestDaoImpl implements MongoTestDao{
     private MongoTemplate mongoTemplate;
 
 
+    /**
+     * @author GaoYuLan
+     * @date 2019/4/2 10:15
+     * @description 保存一条数据
+     * @params [staff]
+     * @return void
+     */
     @Override
-    public void insert(Staff staff) {
-        mongoTemplate.save(staff);
+    public Staff save(Staff staff) {
+        Staff test = mongoTemplate.save(staff);
+        return test;
     }
 
     @Override
-    public void batchInsert(List<Staff> staffList) {
-        mongoTemplate.insertAll(staffList);
+    public Staff insertOne(Staff staff) {
+        Staff test = mongoTemplate.insert(staff);
+        return test;
+    }
+
+    @Override
+    public List<Staff> batchInsert(List<Staff> staffList) {
+        List<Staff> list = ( List<Staff>)mongoTemplate.insertAll(staffList);
+        return list;
     }
 
     @Override

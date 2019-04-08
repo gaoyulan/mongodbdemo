@@ -13,11 +13,20 @@ public interface MongoTestDao {
     /**
      * @author GaoYuLan
      * @date 2019/4/2 10:15
-     * @description 插入一条数据
+     * @description 保存一条数据
      * @params [staff]
      * @return void
     */
-    void insert(Staff staff);
+    Staff save(Staff staff);
+
+    /**
+     * @author GaoYuLan
+     * @date 2019/4/2 10:15
+     * @description 插入一条数据
+     * @params [staff]
+     * @return void
+     */
+    Staff insertOne(Staff staff);
 
     /**
      * @author GaoYuLan
@@ -26,7 +35,7 @@ public interface MongoTestDao {
      * @params [staffList]
      * @return void
     */
-    void batchInsert(List<Staff> staffList);
+    List<Staff> batchInsert(List<Staff> staffList);
 
     /**
      * @author GaoYuLan
