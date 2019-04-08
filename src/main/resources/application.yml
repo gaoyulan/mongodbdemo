@@ -1,0 +1,4 @@
+spring:
+    data:
+        mongodb:
+          uri: mongodb://serv:cplh1234!@192.168.103.228:27017/serv_test
