@@ -30,8 +30,8 @@ public class MongoTestServiceImplTest {
         Staff staff = new Staff();
         staff.setId("123");
         staff.setNumber(1);
-        staff.setName("王贵");
-        staff.setDept("龙慧公司副经理");
+        staff.setName("ss");
+        staff.setDept("Aaa");
         staff.setRoom("901");
         staff.setTel(tel);
         Staff test = mongoTestDao.save(staff);
@@ -45,8 +45,8 @@ public class MongoTestServiceImplTest {
         Staff staff = new Staff();
         staff.setId("123");
         staff.setNumber(1);
-        staff.setName("王贵");
-        staff.setDept("龙慧公司副经理");
+        staff.setName("李四");
+        staff.setDept("B部门");
         staff.setRoom("901");
         staff.setTel(tel);
         Staff test = mongoTestDao.insertOne(staff);
@@ -60,16 +60,16 @@ public class MongoTestServiceImplTest {
         int []tel={1,2};
         Staff staff = new Staff();
         staff.setNumber(1);
-        staff.setName("王贵");
-        staff.setDept("龙慧公司副经理");
+        staff.setName("王五");
+        staff.setDept("C部门");
         staff.setRoom("901");
         staff.setTel(tel);
         list.add(staff);
 
         Staff staff1 = new Staff();
         staff1.setNumber(1);
-        staff1.setName("王贵1");
-        staff1.setDept("龙慧公司副经理");
+        staff1.setName("陈六");
+        staff1.setDept("D部门");
         staff1.setRoom("901");
         staff1.setTel(tel);
         list.add(staff1);
@@ -80,14 +80,14 @@ public class MongoTestServiceImplTest {
     @Test
     public void findById() throws Exception {
 
-        String id = "5ca2d1da57d3572cf4737592";
+        String id = "123";
         Staff staff = mongoTestDao.findById(id);
         System.out.println(staff);
     }
 
     @Test
     public void delete() throws Exception {
-        String id = "5ca2d1da57d3572cf4737592";
+        String id = "123";
         mongoTestDao.delete(id);
     }
 
